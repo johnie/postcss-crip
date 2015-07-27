@@ -34,7 +34,7 @@ console.log('\n===>Output CSS:\n', output);
 
 Or just:
 
-```
+```js
 var output = postcss(crip())
   .process(css)
   .css
