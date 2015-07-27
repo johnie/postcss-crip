@@ -86,7 +86,7 @@ You can create your own crip properties. Not all CSS properties are available in
 
 ```js
 var options = {
-  'az': 'azimuth'
+  'az': ['azimuth']
 }
 
 var output = postcss(crip(options))

@@ -193,4 +193,10 @@ describe('postcss-crip', function () {
         test('h1 { zi: 1000; }', 'h1 { z-index: 1000; }', { }, done);
     });
 
+    it('handles custom properties', function (done) {
+        test('h1 { az: far-right; }', 'h1 { azimuth: far-right; }', {
+            'az': ['azimuth']
+        }, done);
+    });
+
 });
