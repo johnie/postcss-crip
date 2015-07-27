@@ -1,0 +1,34 @@
+{
+  "name": "postcss-crip",
+  "version": "0.0.0",
+  "description": "PostCSS plugin Shorthand properties for Crips too lazy to write",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "shorthand",
+    "crip"
+  ],
+  "author": "Johnie Hjelm <johnie.hjelm@symbio.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnie/postcss-crip.git"
+  },
+  "bugs": {
+    "url": "https://github.com/johnie/postcss-crip/issues"
+  },
+  "homepage": "https://github.com/johnie/postcss-crip",
+  "dependencies": {
+    "postcss": "^4.1.13"
+  },
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^0.14.0",
+    "gulp-mocha": "^2.1.2"
+  },
+  "scripts": {
+    "test": "gulp"
+  }
+}
