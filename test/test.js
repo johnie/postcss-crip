@@ -89,7 +89,7 @@ describe('postcss-crip', function () {
     });
 
     it('handles list-style', function (done) {
-        test('h1 { lis: inside; }', 'h1 { list-style: inside; }', { }, done);
+        test('h1 { li-s: inside; }', 'h1 { list-style: inside; }', { }, done);
     });
 
     it('handles max-height', function (done) {
@@ -174,7 +174,7 @@ describe('postcss-crip', function () {
     });
 
     it('handles vertical-align', function (done) {
-        test('h1 { vv: middle; }', 'h1 { vertical-align: middle; }', { }, done);
+        test('h1 { va: middle; }', 'h1 { vertical-align: middle; }', { }, done);
     });
 
     it('handles visibility', function (done) {

@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/johnie/postcss-crip",
   "dependencies": {
+    "crip-css-properties": "^1.0.1",
     "object-merge": "^2.5.1",
     "postcss": "^4.1.13"
   },
