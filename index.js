@@ -5,7 +5,7 @@ module.exports = postcss.plugin('postcss-crip', function (options) {
 
     options = options || {};
 
-    var DEFAULTS = require('./crip-properties.json');
+    var DEFAULTS = require('crip-css-properties');
 
     var PROPS = objectMerge(DEFAULTS, options);
 

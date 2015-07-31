@@ -78,6 +78,8 @@ body{
 }
 ```
 
+#### [See the full list of abbrivations](https://github.com/johnie/crip-css-properties)
+
 ## Options
 
 _(default: `{}`)_
