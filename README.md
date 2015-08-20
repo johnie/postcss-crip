@@ -78,7 +78,7 @@ body{
 }
 ```
 
-#### [See the full list of abbrivations](https://github.com/johnie/crip-css-properties)
+#### [See the full list of abbreviations](https://github.com/johnie/crip-css-properties)
 
 ## Options
 
