@@ -11,7 +11,7 @@ module.exports = postcss.plugin('postcss-crip', function (options) {
 
     return function (css) {
 
-        css.eachRule(function (rule) {
+        css.walkRules(function (rule) {
             rule.each(function(decl) {
 
                 var prop = decl.prop;
@@ -27,7 +27,7 @@ module.exports = postcss.plugin('postcss-crip', function (options) {
                     });
                 });
 
-                decl.removeSelf();
+                decl.remove();
 
             });
         });

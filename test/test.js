@@ -57,7 +57,7 @@ describe('postcss-crip', function () {
     it('handles font-family', function (done) {
         test('h1 { ff: Helvetica, serif; }',
           'h1 { font-family: Helvetica, serif; }', {
-        }, done);
+          }, done);
     });
 
     it('handles font-size', function (done) {
