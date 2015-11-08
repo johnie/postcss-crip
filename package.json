@@ -22,10 +22,10 @@
   "dependencies": {
     "crip-css-properties": "^1.0.1",
     "object-merge": "^2.5.1",
-    "postcss": "^5.0.10"
+    "postcss": "^5.0.11"
   },
   "devDependencies": {
-    "chai": "^3.4.0",
+    "chai": "^3.4.1",
     "gulp": "^3.9.0",
     "gulp-eslint": "^1.0.0",
     "gulp-mocha": "^2.1.3"
