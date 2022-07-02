@@ -9,7 +9,10 @@
     "shorthand",
     "crip"
   ],
-  "author": "Johnie Hjelm <johnie.hjelm@symbio.com>",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "author": "Johnie Hjelm <johnie@hjelm.im>",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -22,15 +25,32 @@
   "dependencies": {
     "crip-css-properties": "^1.0.1",
     "object-merge": "^2.5.1",
-    "postcss": "^5.0.14"
+    "postcss": "^8.4.14"
   },
   "devDependencies": {
-    "chai": "^3.4.1",
-    "gulp": "^3.9.0",
-    "gulp-eslint": "^3.0.1",
-    "gulp-mocha": "^3.0.1"
+    "clean-publish": "^4.0.1",
+    "eslint": "^8.19.0",
+    "eslint-config-postcss": "^4.0.0",
+    "husky": "^8.0.1",
+    "jest": "^28.1.2",
+    "lint-staged": "^13.0.3"
   },
   "scripts": {
-    "test": "gulp"
+    "test": "jest"
+  },
+  "lint-staged": {
+    "*.js": "eslint *.js"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-postcss",
+    "rules": {
+      "max-len": "off"
+    },
+    "env": {
+      "jest": true
+    }
+  },
+  "clean-publish": {
+    "cleanDocs": true
   }
 }

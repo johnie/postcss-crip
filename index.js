@@ -1,36 +1,33 @@
-var objectMerge = require('object-merge');
-var postcss     = require('postcss');
+const objectMerge = require('object-merge');
+const DEFAULTS = require('crip-css-properties');
 
-module.exports = postcss.plugin('postcss-crip', function (options) {
+const postcssCrip = (opts = {}) => {
+  let PROPS = objectMerge(DEFAULTS, opts);
 
-    options = options || {};
+  return {
+    postcssPlugin: 'postcss-crip',
+    Once(root) {
+      root.walkRules((rule) => {
+        rule.each((decl) => {
+          let { prop } = decl;
 
-    var DEFAULTS = require('crip-css-properties');
+          if (!Object.prototype.hasOwnProperty.call(PROPS, prop)) return;
 
-    var PROPS = objectMerge(DEFAULTS, options);
+          let properties = PROPS[prop];
 
-    return function (css) {
-
-        css.walkRules(function (rule) {
-            rule.each(function(decl) {
-
-                var prop = decl.prop;
-
-                if (!PROPS.hasOwnProperty(prop)) return;
-
-                var properties = PROPS[prop];
-
-                properties.forEach(function (property, index) {
-                    decl.cloneBefore({
-                        prop: properties[index],
-                        value: decl.value
-                    });
-                });
-
-                decl.remove();
-
+          properties.forEach((property, index) => {
+            decl.cloneBefore({
+              prop: properties[index],
+              value: decl.value,
             });
-        });
+          });
 
-    };
-});
+          decl.remove();
+        });
+      });
+    },
+  };
+};
+
+module.exports.postcss = true;
+module.exports = postcssCrip;
