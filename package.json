@@ -1,6 +1,6 @@
 {
   "name": "postcss-crip",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "PostCSS plugin Shorthand properties for Crips too lazy to write",
   "keywords": [
     "postcss",
